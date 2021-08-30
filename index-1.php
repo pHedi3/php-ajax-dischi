@@ -22,9 +22,13 @@
         <div class="container">
             <div class="row">
             <?php
-                foreach ($database as $disc) {?>
-                    <div class="col-2 disc">
-                        <img src="<?php$disc['poster'];?>" alt="">
+                foreach ($database as $disc) {
+                    echo "<div class=\"col-2 disc\"><div class=\"back\">";
+                    echo "<img src=\"{$disc['poster']}\" alt=\"\">";
+                    echo "<h2>{$disc['title']}</h2>";
+                    echo "<h3>{$disc['author']}</h3>";
+                    echo "<h3>{$disc['year']}</h3>";
+                    echo "</div></div>";
                 }
             ?>
             </div>
