@@ -16,15 +16,15 @@ new Vue(
         },
         methods: {
             call: function() {
+                console.log('ciao')
                 var text = 'http://localhost:8888/php-ajax-dischi/api/api.php?gen=' + this.gen
-                axios.get(text)
-                .then((response) => {
+                axios.get(text).then((response) => {
                     this.discs = response.data;
-            })  
+                    console.log('ciao')
+                })  
             }
         }
 
     }
 );
 
-Vue.config.devtools = true;  
